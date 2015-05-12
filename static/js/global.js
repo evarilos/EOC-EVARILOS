@@ -1,13 +1,6 @@
 var TKN = TKN || {};
 TKN.IPSN = TKN.IPSN || {};
 
-TKN.ROS = {
-    config: {
-        wsServer: 'ws://tbot-unit04.:9090'
-    },
-    instance: new ROSLIB.Ros()
-};
-
 TKN.IPSN.map = {
     config: {
         databases: [
@@ -16,7 +9,7 @@ TKN.IPSN.map = {
             {label: 'Scenario 3', url: 'http://ebp.evarilos.eu:5009/evarilos/metrics/v1.0/database/experiment_3/experiment'},
             {label: 'Scenario 4', url: 'http://ebp.evarilos.eu:5009/evarilos/metrics/v1.0/database/experiment_4/experiment'}
         ],
-        mapURL: 'http://ebp.evarilos.eu:5011/static/',
+        mapURL: 'http://localhost:5011/static/',
         containerId: 'map',
         apiURI_ECE: 'http://ebp.evarilos.eu:5010/',
         mapDimensions: {

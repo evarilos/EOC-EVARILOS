@@ -171,14 +171,14 @@ jQuery(function() {
 function getData(experiment_id, database_link){
     
 	
-	    $.getJSON( "http://ebp.evarilos.eu:5011/fetch?url="+database_link, function( data ) {
+	    $.getJSON( "http://localhost:5011/fetch?url="+database_link, function( data ) {
 	        var jxhr = [];
 	        localStorage.setItem(experiment_id, '[]');
 	        var tds = [];
 	        $.each( data, function( key, val ) {
 	            // request multiple JSON files (one per experiment)
 	            	$.ajaxSetup({async:false});
-			jxhr.push($.getJSON( "http://ebp.evarilos.eu:5011/fetch?url="+val, function( data ) {
+			jxhr.push($.getJSON( "http://localhost:5011/fetch?url="+val, function( data ) {
 	               
 	                        //console.log(data);
 	                    try{

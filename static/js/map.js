@@ -45,19 +45,7 @@ TKN.IPSN.map.drawErrorMarker = function (x, y) {
 };
 
 TKN.IPSN.map.drawErroRadius = function (x, y, radius) {
-   // var marker = new google.maps.Marker({
-   //     position: new google.maps.LatLng(TKN.IPSN.map.yToLat(y),TKN.IPSN.map.xToLon(x)),
-   //     icon: {
-   //         path: google.maps.SymbolPath.CIRCLE,
-   //         scale: radius,
-   //         fillColor: 'lightblue',
-   //          fillOpacity: 0.2,
-   //          strokeColor: 'blue',
-   //          strokeOpacity: 0.8,
-   //          strokeWeight: 1
-   //      },
-   //      map: TKN.IPSN.map.instance
-   //  });
+
     var marker = new google.maps.Circle({
         map: TKN.IPSN.map.instance,
         radius: radius,
@@ -135,17 +123,9 @@ TKN.IPSN.map.Map = function () {
     
     // draw measurement points
     $.each(TKN.IPSN.map.config.measurementPoints, function (key, val) {
-//        setTimeout(function() {
+
             TKN.IPSN.map.drawPointMarker(TKN.IPSN.map.config.measurementPoints[key].x, TKN.IPSN.map.config.measurementPoints[key].y, TKN.IPSN.map.config.measurementPoints[key].label); 
-//        }, key * 300);
         
     });
-    
-//    google.maps.event.addListener(this._map, "click", function (event) {
-//        var latitude = event.latLng.lat();
-//        var longitude = event.latLng.lng();
-//        console.log( 'lat: ' + latitude + ', lon: ' + longitude );
-//        
-//    }); //end addListener
-    
+
 };

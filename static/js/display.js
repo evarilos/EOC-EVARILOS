@@ -12,7 +12,7 @@ TKN.IPSN.ranking = {
 
         ],
         defaultDB: 'Scenario 1',
-        detailsURL: 'http://localhost:5006/details.html'
+        detailsURL: 'http://localhost:5011/details.html'
     }
 };
 
